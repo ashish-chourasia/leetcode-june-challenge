@@ -3,22 +3,19 @@ package solutions;
 public class Day09_IsSubsequence {
 
 	public static boolean isSubsequence(String s, String t) {
-		if (s.length() == 0) {
-			return true;
-		}
+		int ptr1 = 0, ptr2 = 0;
 
-		int sIter = 0, tIter = 0;
-
-		while (tIter < t.length()) {
-			if (t.charAt(tIter) == s.charAt(sIter)) {
-				sIter++;
-				if (sIter == s.length())
-					return true;
+		while (ptr1 < s.length() && ptr2 < t.length()) {
+			if (s.charAt(ptr1) == t.charAt(ptr2)) {
+				ptr1++;
+				ptr2++;
+			} 
+			else {
+				ptr2++;
 			}
-			tIter++;
 		}
 
-		return false;
+		return ptr1 == s.length();
 	}
 
 	public static void main(String[] args) {
