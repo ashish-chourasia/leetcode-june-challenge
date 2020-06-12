@@ -63,4 +63,25 @@ class RandomizedSet {
 		Random rand = new Random();
 		return nums.get(rand.nextInt(nums.size()));
 	}
+	/*
+		Consider below values
+		map =
+		1,0 
+		2,1
+		3,2
+		
+		nums = 1,2,3
+		
+		Remove "2" 
+		
+		loc = 1
+		
+		nums = 1,3,3
+		
+		map
+		1,0
+		3,1
+		
+		nums = 1,3
+	 */
 }
