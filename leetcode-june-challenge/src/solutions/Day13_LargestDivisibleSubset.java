@@ -18,7 +18,8 @@ public class Day13_LargestDivisibleSubset {
 			return res;
 		Arrays.sort(nums);
 		int[] dp = new int[nums.length];
-		dp[0] = 1;
+//		dp[0] = 1;
+		Arrays.fill(dp, 1);
 
 		// for each element in nums, find the length of largest subset it has.
 		for (int i = 1; i < nums.length; i++) {
